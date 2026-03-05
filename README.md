@@ -1,2 +1,23 @@
-# Voice-assistant-
-it listens to user input, checks for specific commands like “hey” or “how are you”, and responds with both spoken output (using pyttsx3) and printed text.
+import pyttsx3
+def speak(text):
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
+while True:
+    command = input("you said : ").lower()
+    if command == "hey":
+      speak("Hello! Nice to meet you,,!")
+      print("Hello! Nice to meet you,,!")
+    elif command == "how are you":
+     speak("I am fine...! thank you...!")
+     print("I am fine...! thank you...!")
+    elif command == "what is your name":
+     speak("My name is swaraj kamthe..!")
+     print("My name is swaraj kamthe..!")  
+    elif command == "tell me about your self":
+     speak("My name is swaraj kamthe. i am live in pune.\n currently am pursuing computer science in modern college pune and now am learning artifitial inteligents..!")
+     print("My name is swaraj kamthe. i am live in pune.\n currently am pursuing computer science in modern college pune and now am learning artifitial inteligents..!")
+    else:
+     speak("I don't understand that...!")
+     print("I don't understand that...!")
